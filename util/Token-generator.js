@@ -7,8 +7,8 @@ class TokenGenerator {
     this.password = password;
   }
 
-  async tokenGenerator(req,res,next) {
-    if (!(this.username  && this.password)) {
+  async tokenGenerator(req, res, next) {
+    if (!(this.username && this.password)) {
       return -1;
     }
     const token = jwt.sign({ user_id: this.username }, cred.secret, {
@@ -17,7 +17,6 @@ class TokenGenerator {
 
     return token;
   }
-
 }
 
 module.exports = TokenGenerator;

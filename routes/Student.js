@@ -1,21 +1,17 @@
 var express = require("express");
 const studentRouter = express.Router();
-const Tutor = require('../schema/Schema.Tutor');
+const StudentStorage = require("../util/Student-Storage");
 studentRouter.use(express.urlencoded({ extended: true }));
 
+studentRouter.route("/").get(async (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  res.send("hello");
+});
 
-studentRouter.route("/")
-.get(async(req,res)=>{
-    res.setHeader("Content-Type", "application/json");
-       res.send("hello")
-})
-
-
-studentRouter.route("/createstudent")
-.post(async(req,res)=>{
-    const {StudentName,StudentID}=req.body;
-    Tutor.create({StudentName});
-    res.send("Created Tutor :- "+StudentName)
-})
+studentRouter.route("/createstudent").post(async (req, res) => {
+  const Tutors = new StudentStorage(req.body);
+  await Tutors.studentStorage(res, req.body);
+  res.send("Created Tutor :- " + req.body.StudentName);
+});
 
 module.exports = studentRouter;

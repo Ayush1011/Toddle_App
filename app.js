@@ -14,7 +14,7 @@ var tutorRouter = require('./routes/Tutor');
 var assignmentRouter = require('./routes/Assigment');
 var submissionRouter = require('./routes/Submission');
 var loginRouter = require('./routes/Login');
-
+var studentRouter = require('./routes/Student');
 
 var app = express();
 app.use(cors());
@@ -41,6 +41,7 @@ app.use('/tutor', tutorRouter);
 app.use('/assignment', assignmentRouter);
 app.use('/submission', submissionRouter);
 app.use('/login', loginRouter);
+app.use('/student', studentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
