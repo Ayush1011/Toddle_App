@@ -2,23 +2,23 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 const Submission = new Schema({
-  Assignment_id: {
+  assignmentID: {
     type: Number,
     require: true,
   },
-  Student_id: {
+  studentID: {
     type: Number,
     require: true,
   },
-  Submission_Content: {
+  submissionContent: {
     type: String,
     require: true,
   },
-  Submission_remark: {
+  submissionRemark: {
     type: String,
     default: "Not provided",
   },
-  Submission_Date: {
+  submissionDate: {
     type: Date,
     default: new Date(),
   },

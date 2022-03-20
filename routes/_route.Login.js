@@ -1,6 +1,6 @@
 const express = require("express");
 const loginRouter = express.Router();
-const generateUtil = require("../util/Token-generator");
+const generateUtil = require("../controller/Token-generator");
 
 loginRouter.use(express.urlencoded({ extended: true }));
 

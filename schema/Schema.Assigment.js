@@ -2,22 +2,22 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 const Assigments = new Schema({
-  Assigments_id: {
+  assignmentID: {
     type: Number,
   },
-  Assigments_Name: {
+  assignmentName: {
     type: String,
     default: "Tutor Didn't provide a name",
   },
-  Assigments_Description: {
+  assignmentDescription: {
     type: String,
     default: "Tutor Didn't provide a Description",
   },
-  Assigments_Status: {
+  assignmentStatus: {
     type: String,
-    default: "Pending",
+    default: "SCHEDULED",
   },
-  Teacher_id: {
+  teacherID: {
     type: Number,
     required: true,
   },
@@ -25,18 +25,21 @@ const Assigments = new Schema({
     type: [Number],
     required: true,
   },
-  Submitted_Students: {
+  submittedStudents: {
     type: [Number],
     required: true,
   },
-  Publish_date: {
+  publishDate: {
     type: Date,
     default: new Date(),
   },
-  Expiry_date: {
+  scheduledDate: {
     type: Date,
-    required: true,
-    default: new Date(),
+    required: true,  
+  },
+  expiryDate: {
+    type: Date,
+    required: true,    
   },
 });
 

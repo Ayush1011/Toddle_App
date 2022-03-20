@@ -2,7 +2,7 @@ var express = require("express");
 const tutorRouter = express.Router();
 const Tutor = require("../schema/Schema.Tutor");
 const auth = require("../logic/jwt");
-const TutorStorage = require("../util/Tutor-storage");
+const TutorStorage = require("../controller/_controller.Tutor");
 
 tutorRouter.use(express.urlencoded({ extended: true }));
 
@@ -13,9 +13,12 @@ tutorRouter.route("/all").get(auth, async (req, res) => {
 });
 
 tutorRouter.route("/createtutor").post(async (req, res) => {
-  const Tutors = new TutorStorage(req.body);
+  const Tutors = new TutorStorage();
   await Tutors.tutorStorage(res, req.body);
-  res.send("Created Tutor :- " + req.body.TutorName);
+});
+tutorRouter.route("/:id").get(async (req, res, next) => {
+  const Tutors = new TutorStorage();
+  await Tutors.getTutorByID(req.params.id);
 });
 
 module.exports = tutorRouter;

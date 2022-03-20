@@ -6,24 +6,26 @@ var logger = require('morgan');
 var cors = require('cors');
 var sessions = require('express-session');
 var cred = require('./config/config')
+var cornJob = require('./logic/cornJob')
 
 var mongoConnect = require('./config/mongoConnect');
 
-var indexRouter = require('./routes/index');
-var tutorRouter = require('./routes/Tutor');
-var assignmentRouter = require('./routes/Assigment');
-var submissionRouter = require('./routes/Submission');
-var loginRouter = require('./routes/Login');
-var studentRouter = require('./routes/Student');
+var indexRouter = require('./views/index');
+var tutorRouter = require('./routes/_route.Tutor');
+var assignmentRouter = require('./routes/_route.Assigment');
+var submissionRouter = require('./routes/_route.Submission');
+var loginRouter = require('./routes/_route.Login');
+var studentRouter = require('./routes/_route.Student');
 
 var app = express();
-app.use(cors());
 mongoConnect.connect;
+cornJob.CornSchedule;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(sessions({
   secret: cred.secret,
   saveUninitialized:true,
-  cookie: { maxAge: 3600*5 },
+  cookie: { maxAge: 3600*100 },
   resave: false
 }));
 

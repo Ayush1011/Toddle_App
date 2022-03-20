@@ -9,11 +9,6 @@ const Tutor = new Schema({
   },
   TutorID: {
     type: Number,
- 
-  },
-  Assigments: {
-    type: [Number],
-    required: true,
   },
 });
 
