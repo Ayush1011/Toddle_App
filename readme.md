@@ -55,6 +55,14 @@ npm start
 ```
 * It will automatically redirect to localhost:3000 if not Write localhost:3000 in your default browser
 
+## Bonus Points
+
+### Deployed
+<a href="https://toddleassignment.herokuapp.com/">https://toddleassignment.herokuapp.com/</a>  
+
+### System Design
+<img src="https://firebasestorage.googleapis.com/v0/b/virtusa-58806.appspot.com/o/Teacher_Student_ER.jpg?alt=media&token=6f4798f5-658b-40b8-bd55-620170d834da" data- width="400" height="400" />
+
 
 ### Things i will Do if i had more time 
 * Provide refresh token with access token for better security.
