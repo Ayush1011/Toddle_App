@@ -61,7 +61,7 @@ npm start
 <a href="https://toddleassignment.herokuapp.com/">https://toddleassignment.herokuapp.com/</a>  
 
 ### System Design
-<a href='https://postimg.cc/Z025pwVx' target='_blank'><img src='https://i.postimg.cc/Z025pwVx/System-Design-Notification.jpg' border='0' alt='System-Design-Notification' width="700" height="400"/></a>
+<a href='https://postimg.cc/Z025pwVx' target='_blank'><img src='https://i.postimg.cc/Z025pwVx/System-Design-Notification.jpg' border='0' alt='System-Design-Notification' /></a>
 
 
 ### Things i will Do if i had more time 
