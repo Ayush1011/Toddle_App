@@ -61,7 +61,7 @@ npm start
 <a href="https://toddleassignment.herokuapp.com/">https://toddleassignment.herokuapp.com/</a>  
 
 ### System Design
-<img src="https://firebasestorage.googleapis.com/v0/b/virtusa-58806.appspot.com/o/Teacher_Student_ER.jpg?alt=media&token=6f4798f5-658b-40b8-bd55-620170d834da" data- width="400" height="400" />
+<a href='https://postimg.cc/Z025pwVx' target='_blank'><img src='https://i.postimg.cc/Z025pwVx/System-Design-Notification.jpg' border='0' alt='System-Design-Notification' width="700" height="400"/></a>
 
 
 ### Things i will Do if i had more time 
