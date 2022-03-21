@@ -31,7 +31,8 @@ https://anotepad.com/notes/enhqwsff
 * The Code is written on OOPS concept with help of classes.
 * JWT Token for all routes.
 * MVC approach followed.
-* Understandle routes for fast development
+* Understandle routes for fast development.
+* Corn job will automatically update the status for Assignments.
 
 
 
