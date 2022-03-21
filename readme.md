@@ -14,11 +14,11 @@
 ## Navigation :- 
 | URL | Work |
 | :---: | :---: | 
-| https://toddleassignment.herokuapp.com/ | HomePage | 
+| https://toddleassignment.herokuapp.com/{routes} | HomePage | 
 | https://toddleassignment.herokuapp.com/Student/{routes} | For Students | 
-| https://toddleassignment.herokuapp.com/Assignments | For Assignments | 
-| https://toddleassignment.herokuapp.com/Tutor | For Tutors | 
-| https://toddleassignment.herokuapp.com/Submission | For Submission | 
+| https://toddleassignment.herokuapp.com/Assignments/{routes} | For Assignments | 
+| https://toddleassignment.herokuapp.com/Tutor/{routes} | For Tutors | 
+| https://toddleassignment.herokuapp.com/Submission/{routes} | For Submission | 
 
 ## Database Schema
 
